@@ -1,0 +1,131 @@
+package project4;
+/**
+ * super class or the "prototype" class 
+ * @author ian M 
+ * @since 4/22/19
+ *
+ */
+public abstract class shoe implements Cloneable {
+	private String name; 
+	protected String type; 
+	/**
+	 * Gets the name of the shoe brand
+	 * @return - name 
+	 */
+	public String getName() {
+		return name; 
+	}
+	/**
+	 * sets the name of the shoe brand 
+	 * @param - name
+	 */
+	public void setName(String name) {
+		name = this.name;
+	}
+	/**
+	 * gets the type
+	 * @return -type
+	 */
+	public String getType() {
+		return type;
+	}
+	/**
+	 * sets the type of the object
+	 * @param type
+	 */
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	abstract void shoebox();
+	
+	/**
+	 * object clone
+	 */
+	public Object clone () {
+		Object clone = null; 
+		 /**
+		  * exception handling 
+		  */
+		try {
+	         clone = super.clone();
+	         
+	      } 
+		 catch (CloneNotSupportedException ce) {
+	         ce.printStackTrace();
+	      }
+	      
+	      return clone;
+	   }
+	}
+	
+
+---------------------------------------------------------------------------
+package project4;
+/**
+ * sub class of shoe 
+ * clone object
+ * @author ian M 
+ *
+ */
+public class adidas extends shoe  {
+
+	public adidas() {
+		type= "adidas";
+	}
+
+	@Override
+	public void shoebox() {
+		// TODO Auto-generated method stub
+		
+		
+	}
+	
+}
+---------------------------------------------------------------------------
+package project4;
+/**
+ * sub class of shoe 
+ * clone object
+ * @author ian M 
+ *
+ */
+public class converse extends shoe {
+	
+	public converse() {
+		type="converse";
+	}
+
+	@Override
+	public void shoebox() {
+		// TODO Auto-generated method stub
+		
+		
+	}
+	
+
+}
+---------------------------------------------------------------------------
+package project4;
+/**
+ * sub class of shoe 
+ * clone object
+ * @author ian M 
+ *
+ */
+public class nike extends shoe{
+	
+	public nike () {
+		type = "nike";
+	}
+
+	@Override
+	public void shoebox() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
+
+
+
